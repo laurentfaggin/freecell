@@ -27,6 +27,12 @@
     <ClCompile Include="mouseEventHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="jeuComplet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeroulementJeu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="cartes_img\01-coeur.png">
@@ -44,6 +50,18 @@
       <Filter>Resource Files</Filter>
     </ClInclude>
     <ClInclude Include="Comportements.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jeuComplet.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Couleur.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Valeur.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeroulementJeu.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>

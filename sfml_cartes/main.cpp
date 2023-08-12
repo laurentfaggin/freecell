@@ -5,61 +5,22 @@
 #include "tapis.h"
 #include "mouseEventHandler.h"
 
-void circle();
+
 void carte();
 
 int main()
 {
-    //circle();
     carte();
     return 0;
 }
 
-void circle() {
-    // Obtenez la résolution de l'écran
-    sf::VideoMode terminalSize = sf::VideoMode::getDesktopMode();
 
-    // Calcul des dimensions de la fenêtre pour obtenir les 3/4 de la résolution de l'écran
-    unsigned int largeurFenetre = terminalSize.width * 3 / 4;
-    unsigned int hauteurFenetre = terminalSize.height * 3 / 4;
-
-    // Création fenêtre SFML centrée
-    sf::RenderWindow window(sf::VideoMode(largeurFenetre, hauteurFenetre), "cercle");
-
-    // Calcul de la position de la fenêtre pour la centrer
-    unsigned int positionFenetreX = (terminalSize.width - largeurFenetre) / 2;
-    unsigned int positionFenetreY = (terminalSize.height - hauteurFenetre) / 2;
-
-    // Definition de la position de la fenêtre
-    window.setPosition(sf::Vector2i(positionFenetreX, positionFenetreY));
-
-    sf::CircleShape shape(200.f);
-    shape.setFillColor(sf::Color::Green);
-
-    float centreX = largeurFenetre / 2;
-    float centreY = hauteurFenetre / 2;
-
-    shape.setPosition(centreX - 200, centreY - 200);
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
-}
 
 void carte() {
     sf::VideoMode terminalSize = sf::VideoMode::getDesktopMode();
     unsigned int largeurFenetre = terminalSize.width * 3 / 4;
     unsigned int hauteurFenetre = terminalSize.height * 3 / 4;
-    sf::RenderWindow window(sf::VideoMode(largeurFenetre, hauteurFenetre), "Jeu de cartes");
+    sf::RenderWindow window(sf::VideoMode(largeurFenetre, hauteurFenetre), "FREECELL");
     unsigned int positionFenetreX = (terminalSize.width - largeurFenetre) / 2;
     unsigned int positionFenetreY = (terminalSize.height - hauteurFenetre) / 2;
     window.setPosition(sf::Vector2i(positionFenetreX, positionFenetreY));
@@ -69,7 +30,7 @@ void carte() {
         std::cerr << "erreur" << std::endl;
     }
     
-    Carte carte(1, "coeur", faceCarte);
+    Carte carte(valeur_R, coeur, faceCarte);
     carte.echelleAuto(150);
     float centreX = largeurFenetre / 2;
     float centreY = hauteurFenetre / 2;
@@ -77,7 +38,7 @@ void carte() {
 
     sf::Vector2u taillefenetre = window.getSize();
     sf::Texture aspectTapis;
-    if (!aspectTapis.loadFromFile("cartes_img/oldcar.jpg")) {
+    if (!aspectTapis.loadFromFile("cartes_img/1HD.jpg")) {
         std::cerr << "erreur" << std::endl;
     }
     Tapis tapis(aspectTapis);
@@ -99,7 +60,7 @@ void carte() {
                 if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
 
                     sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
-                    mouseHandler.updateCartePosition(mousePosition, carte, window, delta);                   
+                    mouseHandler.updateCartePosition(mousePosition, carte, window);                   
                 }
             }
             if (event.type == sf::Event::Closed)

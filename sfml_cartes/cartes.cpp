@@ -2,12 +2,10 @@
 #include <SFML/Graphics.hpp>
 #include "cartes.h"
 
+Carte::Carte() { ; }
 
-Carte::Carte(int p_valeur, std::string p_couleur, sf::Texture& p_texture) {
-	this->m_valeur = p_valeur;
-	this->m_couleur = p_couleur;
+Carte::Carte(Valeur p_valeur, Couleur p_couleur, sf::Texture& p_texture) :m_valeur(p_valeur), m_couleur(p_couleur) {
 	this->m_sprite = new sf::Sprite(p_texture);
-	this->m_click = false;
 }
 
 Carte::~Carte() { ; }
