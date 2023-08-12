@@ -26,11 +26,11 @@ void carte() {
     window.setPosition(sf::Vector2i(positionFenetreX, positionFenetreY));
     
     sf::Texture faceCarte;
-    if (!faceCarte.loadFromFile("cartes_img/R-coeur.png")) {
+    if (!faceCarte.loadFromFile("cartes_img/13-coeur.png")) {
         std::cerr << "erreur" << std::endl;
     }
     
-    Carte carte(valeur_R, coeur, faceCarte);
+    Carte carte(valeur_13, coeur, faceCarte);
     carte.echelleAuto(150);
     float centreX = largeurFenetre / 2;
     float centreY = hauteurFenetre / 2;
@@ -38,7 +38,7 @@ void carte() {
 
     sf::Vector2u taillefenetre = window.getSize();
     sf::Texture aspectTapis;
-    if (!aspectTapis.loadFromFile("cartes_img/1HD.jpg")) {
+    if (!aspectTapis.loadFromFile("cartes_img/HD1.jpg")) {
         std::cerr << "erreur" << std::endl;
     }
     Tapis tapis(aspectTapis);
