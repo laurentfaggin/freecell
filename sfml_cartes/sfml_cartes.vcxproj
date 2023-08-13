@@ -136,7 +136,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cartes.cpp" />
-    <ClCompile Include="DeroulementJeu.cpp" />
+    <ClCompile Include="GamePlay.cpp" />
     <ClCompile Include="jeuComplet.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mouseEventHandler.cpp" />
@@ -149,7 +149,7 @@
     <ClInclude Include="cartes.h" />
     <ClInclude Include="Comportements.h" />
     <ClInclude Include="Couleur.h" />
-    <ClInclude Include="DeroulementJeu.h" />
+    <ClInclude Include="GamePlay.h" />
     <ClInclude Include="jeuComplet.h" />
     <ClInclude Include="mouseEventHandler.h" />
     <ClInclude Include="tapis.h" />

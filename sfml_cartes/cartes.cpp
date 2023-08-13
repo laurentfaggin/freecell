@@ -1,10 +1,17 @@
 #include <string>
 #include <SFML/Graphics.hpp>
+#include <exception>
 #include "cartes.h"
 
 Carte::Carte() { ; }
 
-Carte::Carte(Valeur p_valeur, Couleur p_couleur, sf::Texture& p_texture) :m_valeur(p_valeur), m_couleur(p_couleur) {
+Carte::Carte(int p_valeur, Couleur p_couleur, sf::Texture& p_texture) :
+	m_valeur(p_valeur), 
+	m_couleur(p_couleur) 
+{
+	if (p_valeur < 0 || p_valeur > 13) {
+		std::invalid_argument("la valeur de la carte ne peut etre superieur a 13 ou inferieure a 0");
+	}
 	this->m_sprite = new sf::Sprite(p_texture);
 }
 
@@ -26,6 +33,14 @@ void Carte::setPosition(float x, float y) {
 
 void Carte::setClick(bool click) {
 	m_click = click;;
+}
+
+void Carte::setNom(std::string p_nom) {
+
+}
+
+int Carte::valeur() {
+	return this->m_valeur;
 }
 
 void Carte::setDeplacement(const sf::Vector2f& deplacement) {

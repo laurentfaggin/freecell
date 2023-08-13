@@ -30,7 +30,7 @@
     <ClCompile Include="jeuComplet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DeroulementJeu.cpp">
+    <ClCompile Include="GamePlay.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -61,7 +61,7 @@
     <ClInclude Include="Valeur.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
-    <ClInclude Include="DeroulementJeu.h">
+    <ClInclude Include="GamePlay.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>

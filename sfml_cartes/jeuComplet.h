@@ -8,6 +8,7 @@ class JeuComplet {
 public:
 	JeuComplet();
 	~JeuComplet();
+
 	std::string couleurToString(Couleur p_couleur);
 	std::string cheminTexture(Couleur p_couleur);
 

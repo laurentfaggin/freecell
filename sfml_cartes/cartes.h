@@ -8,13 +8,14 @@ class Carte
 {
 public:
     Carte();
-    Carte(Valeur p_valeur, Couleur p_couleur, sf::Texture& p_texture);
+    Carte(int p_valeur, Couleur p_couleur, sf::Texture& p_texture);
     ~Carte();
     void render(sf::RenderTarget& renderWindow);
     void echelleAuto(unsigned int p_largeurCarte);
     void setPosition(float x, float y);
     void setClick(bool click);
     bool getClick();
+    int valeur();
     void setDeplacement(const sf::Vector2f& deplacement);
     sf::Vector2f getScale();
     sf::Vector2u getSizeCarte();
@@ -24,9 +25,8 @@ public:
    
 private:
     sf::Sprite *m_sprite;
-   // int m_valeur;
+    int m_valeur;
     Couleur m_couleur;
-    Valeur m_valeur;
     bool m_click;
     sf::Vector2f m_deplacement;
 };

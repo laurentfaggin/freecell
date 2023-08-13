@@ -26,11 +26,11 @@ void carte() {
     window.setPosition(sf::Vector2i(positionFenetreX, positionFenetreY));
     
     sf::Texture faceCarte;
-    if (!faceCarte.loadFromFile("cartes_img/13-coeur.png")) {
+    if (!faceCarte.loadFromFile("cartes_img/face/13-coeur.png")) {
         std::cerr << "erreur" << std::endl;
     }
     
-    Carte carte(valeur_13, coeur, faceCarte);
+    Carte carte(13, coeur, faceCarte);
     carte.echelleAuto(150);
     float centreX = largeurFenetre / 2;
     float centreY = hauteurFenetre / 2;
