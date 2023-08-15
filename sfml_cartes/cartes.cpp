@@ -15,6 +15,13 @@ Carte::Carte(int p_valeur, Couleur p_couleur, sf::Texture& p_texture) :
 	this->m_sprite = new sf::Sprite(p_texture);
 }
 
+//Carte::Carte(Valeur p_valeur, Couleur p_couleur, sf::Texture& p_texture) :
+//	m_valeur(p_valeur),
+//	m_couleur(p_couleur)
+//{
+//	this->m_sprite = new sf::Sprite(p_texture);
+//}
+
 Carte::~Carte() { ; }
 
 void Carte::render(sf::RenderTarget& renderWindow) {
@@ -35,9 +42,6 @@ void Carte::setClick(bool click) {
 	m_click = click;;
 }
 
-void Carte::setNom(std::string p_nom) {
-
-}
 
 int Carte::valeur() {
 	return this->m_valeur;

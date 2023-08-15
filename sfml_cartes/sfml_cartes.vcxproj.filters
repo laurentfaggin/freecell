@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Liste">
+      <UniqueIdentifier>{7ba91c06-d722-4df2-9b7e-2b351483c595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Cartes">
+      <UniqueIdentifier>{86a20fde-2602-4021-89ad-a4416aaba07a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -35,14 +41,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="cartes_img\01-coeur.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="cartes.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
     <ClInclude Include="tapis.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
@@ -52,17 +50,29 @@
     <ClInclude Include="Comportements.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
-    <ClInclude Include="jeuComplet.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Couleur.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Valeur.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
     <ClInclude Include="GamePlay.h">
       <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="collection.h">
+      <Filter>Resource Files\Liste</Filter>
+    </ClInclude>
+    <ClInclude Include="listeGenerique.h">
+      <Filter>Resource Files\Liste</Filter>
+    </ClInclude>
+    <ClInclude Include="operateur.h">
+      <Filter>Resource Files\Liste</Filter>
+    </ClInclude>
+    <ClInclude Include="cartes.h">
+      <Filter>Resource Files\Cartes</Filter>
+    </ClInclude>
+    <ClInclude Include="Couleur.h">
+      <Filter>Resource Files\Cartes</Filter>
+    </ClInclude>
+    <ClInclude Include="Valeur.h">
+      <Filter>Resource Files\Cartes</Filter>
+    </ClInclude>
+    <ClInclude Include="jeuComplet.h">
+      <Filter>Resource Files\Cartes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

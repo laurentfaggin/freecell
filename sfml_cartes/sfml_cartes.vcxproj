@@ -143,15 +143,15 @@
     <ClCompile Include="tapis.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="cartes_img\01-coeur.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="cartes.h" />
+    <ClInclude Include="collection.h" />
     <ClInclude Include="Comportements.h" />
     <ClInclude Include="Couleur.h" />
     <ClInclude Include="GamePlay.h" />
     <ClInclude Include="jeuComplet.h" />
+    <ClInclude Include="listeGenerique.h" />
     <ClInclude Include="mouseEventHandler.h" />
+    <ClInclude Include="operateur.h" />
     <ClInclude Include="tapis.h" />
     <ClInclude Include="Valeur.h" />
   </ItemGroup>

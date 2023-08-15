@@ -9,6 +9,7 @@ class Carte
 public:
     Carte();
     Carte(int p_valeur, Couleur p_couleur, sf::Texture& p_texture);
+    //Carte(Valeur p_valeur, Couleur p_couleur, sf::Texture& p_texture);
     ~Carte();
     void render(sf::RenderTarget& renderWindow);
     void echelleAuto(unsigned int p_largeurCarte);
@@ -26,6 +27,7 @@ public:
 private:
     sf::Sprite *m_sprite;
     int m_valeur;
+    //Valeur m_valeur;
     Couleur m_couleur;
     bool m_click;
     sf::Vector2f m_deplacement;

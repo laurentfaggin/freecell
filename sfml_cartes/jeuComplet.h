@@ -1,17 +1,18 @@
 #pragma once
-#include <vector>
 #include <string>
 #include "cartes.h"
+#include "listeGenerique.h"
 
 
 class JeuComplet {
 public:
 	JeuComplet();
 	~JeuComplet();
+	Liste<Carte>* getCartes();
 
 	std::string couleurToString(Couleur p_couleur);
-	std::string cheminTexture(Couleur p_couleur);
+	std::string cheminTexture(int i, Couleur p_couleur);
 
 private:
-	Carte* m_cartes;
+	Liste<Carte>* m_cartes;
 };
